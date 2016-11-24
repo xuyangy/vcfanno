@@ -570,7 +570,7 @@ func (a *Annotator) Setup(query HeaderUpdater) ([]interfaces.Queryable, error) {
 				if src.IsNumber() {
 					htype = "Float"
 				}
-				src.UpdateHeader(query, a.Ends, htype, "1")
+				src.UpdateHeader(query, a.Ends, htype, "1","")
 			}
 		} else {
 			log.Printf("type not known: %T\n", queryables[i])
