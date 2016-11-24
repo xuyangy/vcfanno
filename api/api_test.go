@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/brentp/irelate/interfaces"
-	"github.com/brentp/irelate/parsers"
-	//"github.com/brentp/vcfanno/api"
-	"github.com/brentp/vcfgo"
+	"github.com/xuyangy/irelate/interfaces"
+	"github.com/xuyangy/irelate/parsers"
+	//"github.com/xuyangy/vcfanno/api"
+	"github.com/xuyangy/vcfgo"
 	. "gopkg.in/check.v1"
 )
 

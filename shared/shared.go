@@ -6,7 +6,7 @@ import (
 	"log"
 	"strings"
 
-	. "github.com/brentp/vcfanno/api"
+	. "github.com/xuyangy/vcfanno/api"
 	"github.com/brentp/xopen"
 )
 

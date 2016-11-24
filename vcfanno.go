@@ -15,12 +15,12 @@ import (
 	"time"
 
 	"github.com/BurntSushi/toml"
-	"github.com/brentp/irelate"
-	"github.com/brentp/irelate/interfaces"
-	"github.com/brentp/irelate/parsers"
-	. "github.com/brentp/vcfanno/api"
-	. "github.com/brentp/vcfanno/shared"
-	"github.com/brentp/vcfgo"
+	"github.com/xuyangy/irelate"
+	"github.com/xuyangy/irelate/interfaces"
+	"github.com/xuyangy/irelate/parsers"
+	. "github.com/xuyangy/vcfanno/api"
+	. "github.com/xuyangy/vcfanno/shared"
+	"github.com/xuyangy/vcfgo"
 	"github.com/brentp/xopen"
 )
 
@@ -49,7 +49,7 @@ func main() {
 =============================================
 vcfanno version %s [built with %s]
 
-see: https://github.com/brentp/vcfanno
+see: https://github.com/xuyangy/vcfanno
 =============================================
 `, VERSION, runtime.Version())
 

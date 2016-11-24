@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/brentp/irelate/interfaces"
-	"github.com/brentp/vcfgo"
+	"github.com/xuyangy/irelate/interfaces"
+	"github.com/xuyangy/vcfgo"
 )
 
 type Reducer func([]interface{}) interface{}

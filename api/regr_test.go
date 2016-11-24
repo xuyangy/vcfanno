@@ -1,8 +1,8 @@
 package api
 
 import (
-	"github.com/brentp/irelate/parsers"
-	"github.com/brentp/vcfgo"
+	"github.com/xuyangy/irelate/parsers"
+	"github.com/xuyangy/vcfgo"
 	. "gopkg.in/check.v1"
 )
 

@@ -11,9 +11,9 @@ import (
 	"github.com/biogo/hts/sam"
 	"github.com/xuyangy/bix"
 	"github.com/brentp/goluaez"
-	"github.com/brentp/irelate/interfaces"
-	"github.com/brentp/irelate/parsers"
-	"github.com/brentp/vcfgo"
+	"github.com/xuyangy/irelate/interfaces"
+	"github.com/xuyangy/irelate/parsers"
+	"github.com/xuyangy/vcfgo"
 )
 
 // LEFT prefix

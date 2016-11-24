@@ -11,8 +11,8 @@ import (
 	"github.com/brentp/irelate"
 	"github.com/brentp/irelate/interfaces"
 	"github.com/brentp/irelate/parsers"
-	"github.com/brentp/vcfanno/api"
-	"github.com/brentp/vcfanno/shared"
+	"github.com/xuyangy/vcfanno/api"
+	"github.com/xuyangy/vcfanno/shared"
 	"github.com/brentp/xopen"
 )
 
