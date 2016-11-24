@@ -9,7 +9,7 @@ import (
 	"unsafe"
 
 	"github.com/biogo/hts/sam"
-	"github.com/brentp/bix"
+	"github.com/xuyangy/bix"
 	"github.com/brentp/goluaez"
 	"github.com/brentp/irelate/interfaces"
 	"github.com/brentp/irelate/parsers"
@@ -344,9 +344,8 @@ func (s *Source) AnnotateOne(v interfaces.IVariant, vals []interface{}, prefix s
 }
 
 // UpdateHeader does what it suggests but handles left and right ends for svs
-func (s *Source) UpdateHeader(r HeaderUpdater, ends bool, htype string, number string) {
+func (s *Source) UpdateHeader(r HeaderUpdater, ends bool, htype string, number string, desc string) {
 	ntype := "String"
-	var desc string
 	// for 'self' and 'first', we can get the type from the header of the annotation file.
 	if htype != "" && (s.Op == "self" || s.Op == "first") {
 		ntype = htype
@@ -382,7 +381,7 @@ func (s *Source) UpdateHeader(r HeaderUpdater, ends bool, htype string, number s
 		}
 	}
 	if (s.Op == "first" || s.Op == "self") && htype == ntype {
-		desc = fmt.Sprintf("transfered from matched variants in %s", s.File)
+                // keep the original description
 	} else if strings.HasSuffix(s.File, ".bam") && s.Field == "" {
 		desc = fmt.Sprintf("calculated by coverage from %s", s.File)
 	} else if s.Field == "DP2" {
@@ -563,7 +562,7 @@ func (a *Annotator) Setup(query HeaderUpdater) ([]interfaces.Queryable, error) {
 	for i, file := range files {
 		if q, ok := queryables[i].(*bix.Bix); ok {
 			for _, src := range fmap[file] {
-				src.UpdateHeader(query, a.Ends, q.GetHeaderType(src.Field), q.GetHeaderNumber(src.Field))
+				src.UpdateHeader(query, a.Ends, q.GetHeaderType(src.Field), q.GetHeaderNumber(src.Field), q.GetHeaderDescription(src.Field))
 			}
 		} else if _, ok := queryables[i].(*parsers.BamQueryable); ok {
 			for _, src := range fmap[file] {
